@@ -1,10 +1,13 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 
 namespace CalMurasama.Items
 {
+	public class Recipes : ModSystem
+	{
         public static void DontConsumeSword(Recipe recipe, int type, ref int amount)
         {
             if (type == ItemID.CopperShortsword)
@@ -35,4 +38,6 @@ namespace CalMurasama.Items
                 .AddConsumeItemCallback(DontConsumeSword)
                 .Register();
         }
+
+	}
 }
